@@ -1,7 +1,14 @@
 .home__page {
   width: 100%;
   height: 100vh;
-  background-color: gray;
+  background-image: linear-gradient(
+    to right top,
+    #0057d7,
+    #4050df,
+    #6445e4,
+    #8433e5,
+    #a300e3
+  );
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,6 +19,10 @@
   height: 70%;
   background-color: white;
   border-radius: 1.5rem;
+}
+
+.loader {
+  margin-top: 5rem;
 }
 
 .heading {
@@ -44,7 +55,6 @@
   align-items: center;
   gap: 1rem;
   padding: 0.5rem 2rem;
-  cursor: pointer;
 }
 
 .individual__user::before {
@@ -61,11 +71,17 @@
   height: 2.5rem;
 }
 
+.username {
+  cursor: pointer;
+}
+
+.user__link {
+  text-decoration: none;
+}
+
 .user__list::-webkit-scrollbar {
   width: 0.5rem;
   margin: 5rem 0;
-  position: absolute;
-  left: 0;
 }
 .user__list::-webkit-scrollbar-track {
   background-color: #eff4ff;

@@ -1,0 +1,46 @@
+.side__menu {
+  height: 85vh;
+  background-image: linear-gradient(
+    to bottom,
+    #0057d7,
+    #4050df,
+    #6445e4,
+    #8433e5,
+    #a300e3
+  );
+  border-radius: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sections {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section__link {
+  position: relative;
+  padding: 0.8rem 0;
+}
+
+.section__link::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  border-bottom: 2px solid #6d6fd3;
+  width: 100%;
+}
+
+.section__link .nav__link {
+  text-decoration: none;
+  color: #b0b0ee;
+}
+
+.section__link .nav__link:focus {
+  color: white;
+  font-weight: 600;
+  transition: 0.2s ease-in-out;
+}

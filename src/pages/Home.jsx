@@ -1,19 +1,11 @@
-import React, { useEffect, useState } from "react";
-import "../styles/Home.css";
+import React, { useContext, useEffect, useState } from "react";
+import "../styles/home.css";
+import loader from "../assets/loader.gif";
+import UserAccount from "../components/UserAccount";
+import { UserContext } from "../context/Context";
 
 function Home() {
-  const [userAccounts, setUserAccounts] = useState([]);
-
-  const fetchUsers = () => {
-    fetch("https://panorbit.in/api/users.json")
-      .then((res) => res.json())
-      .then((data) => setUserAccounts(data.users))
-      .catch((err) => console.log(err));
-  };
-
-  useEffect(() => {
-    fetchUsers();
-  }, []);
+  const { userAccounts } = useContext(UserContext);
 
   return (
     <div className="home__page">
@@ -22,17 +14,15 @@ function Home() {
         <div className="user__list">
           <div className="accounts">
             {userAccounts.length === 0 ? (
-              <h2 className="loading">fetching user accounts...</h2>
+              <img className="loader" src={loader} alt="" />
             ) : (
               userAccounts.map((user) => {
                 return (
                   <div className="individual__user" key={user.id}>
-                    <img
-                      className="profile__pic"
-                      src={user.profilepicture}
-                      alt=""
+                    <UserAccount
+                      userDetails={user}
+                      userAccounts={userAccounts}
                     />
-                    <p className="username">{user.name}</p>
                   </div>
                 );
               })
