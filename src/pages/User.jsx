@@ -3,7 +3,7 @@ import SideMenu from "../components/SideMenu";
 import "../styles/user.css";
 import { useParams } from "react-router-dom";
 import { UserContext } from "../context/Context";
-import Profile from "../components/Profile";
+import Profile from "./Profile";
 
 function User() {
   return (

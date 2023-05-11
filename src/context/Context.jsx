@@ -1,4 +1,5 @@
 import { createContext, useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
 export const UserContext = createContext();
 
@@ -16,8 +17,17 @@ const Context = ({ children }) => {
     fetchUsers();
   }, []);
 
+  const getUser = () => {
+    const { userId } = useParams();
+
+    const selectedItem = userAccounts[userId - 1];
+
+    return selectedItem;
+  };
+
   const value = {
     userAccounts,
+    getUser,
   };
 
   return <UserContext.Provider value={value}>{children}</UserContext.Provider>;

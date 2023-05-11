@@ -11,7 +11,7 @@ function UserAccount({ userDetails }) {
         src={profilepicture}
         alt="user_profile_pic"
       />
-      <Link className="user__link" to={`/user/${id}`}>
+      <Link className="user__link" to={`/profile/${id}`}>
         <p className="username">{name}</p>
       </Link>
     </>

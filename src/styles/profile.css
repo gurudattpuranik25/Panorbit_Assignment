@@ -1,3 +1,18 @@
+.profile__home {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.profile__page {
+  width: 75%;
+  display: grid;
+  grid-column-gap: 4%;
+  grid-template-columns: 20% 76%;
+}
+
 .user__details {
   color: #5c5c5c;
 }
@@ -38,6 +53,7 @@
   display: flex;
   gap: 0.8rem;
   align-items: center;
+  cursor: pointer;
 }
 
 .user__image {
