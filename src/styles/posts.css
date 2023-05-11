@@ -4,6 +4,7 @@
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
+  color: #5c5c5c;
 }
 
 .posts__page {
@@ -13,3 +14,9 @@
   grid-template-columns: 20% 76%;
 }
 
+.post__details h1 {
+  text-align: center;
+  margin-top: 12rem;
+  font-size: 5.5rem;
+  color: rgb(234, 234, 234);
+}

@@ -33,7 +33,7 @@ function SideMenu() {
             </Link>
           </p>
           <p className="section__link">
-            <Link className="nav__link" to="/user">
+            <Link className="nav__link" to={`/todo/${selectedItem.id}`}>
               ToDo
             </Link>
           </p>

@@ -1,4 +1,4 @@
-.gallery__home {
+.todo__home {
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -7,14 +7,14 @@
   color: #5c5c5c;
 }
 
-.gallery__page {
+.todo__page {
   width: 75%;
   display: grid;
   grid-column-gap: 4%;
   grid-template-columns: 20% 76%;
 }
 
-.gallery__details h1 {
+.todo__details h1 {
   text-align: center;
   margin-top: 12rem;
   font-size: 5.5rem;
