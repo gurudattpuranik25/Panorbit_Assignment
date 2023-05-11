@@ -28,7 +28,7 @@ function SideMenu() {
             </Link>
           </p>
           <p className="section__link">
-            <Link className="nav__link" to="/user">
+            <Link className="nav__link" to={`/gallery/${selectedItem.id}`}>
               Gallery
             </Link>
           </p>
