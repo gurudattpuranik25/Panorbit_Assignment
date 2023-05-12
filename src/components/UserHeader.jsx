@@ -1,65 +1,43 @@
-// import React from "react";
-
-// function UserHeader({ pageTitle, selectedItem }) {
-//   return (
-//     <div className="user__header">
-//       {selectedItem && (
-//         <>
-//           <p>{pageTitle}</p>
-//           <div className="user__profile">
-//             <img
-//               className="user__image"
-//               src={selectedItem.profilepicture}
-//               alt="profile_picture"
-//             />
-//             <p className="menu__name">{selectedItem.name}</p>
-//           </div>
-//         </>
-//       )}
-//     </div>
-//   );
-// }
-
-// export default UserHeader;
-
 import React, { useContext } from "react";
 import Menu from "@mui/material/Menu";
 import "../styles/userHeader.css";
 import { UserContext } from "../context/Context";
 import { Link } from "react-router-dom";
 
-function UserHeader({ pageTitle, selectedItem }) {
+function UserHeader({ pageTitle, selectedUser }) {
   const { userAccounts } = useContext(UserContext);
 
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
+
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
+
   const handleClose = () => {
     setAnchorEl(null);
   };
 
+  // generate random users to show under profile menu
   const randomNumber = () => Math.floor(Math.random() * userAccounts.length);
 
   const firstUser = userAccounts[randomNumber()];
   const secondUser = userAccounts[randomNumber()];
-  console.log(randomNumber);
 
   return (
     <div className="user__header">
-      {selectedItem && (
+      {selectedUser && (
         <>
           <p>{pageTitle}</p>
           <div className="user__profile" onClick={handleClick}>
             <img
               className="user__image"
-              src={selectedItem.profilepicture}
+              src={selectedUser.profilepicture}
               alt="profile_picture"
             />
-            <p className="menu__name">{selectedItem.name}</p>
+            <p className="menu__name">{selectedUser.name}</p>
           </div>
-
+          {/* render profile menu */}
           <Menu
             id="basic-menu"
             anchorEl={anchorEl}
@@ -70,11 +48,11 @@ function UserHeader({ pageTitle, selectedItem }) {
             <div className="menu">
               <img
                 className="dialog__picture"
-                src={selectedItem.profilepicture}
+                src={selectedUser.profilepicture}
                 alt=""
               />
-              <p className="dialog__name">{selectedItem.name}</p>
-              <p className="dialog__email">{selectedItem.email}</p>
+              <p className="dialog__name">{selectedUser.name}</p>
+              <p className="dialog__email">{selectedUser.email}</p>
               <div className="horizontal__border"></div>
               <div className="dialog__user__list">
                 <Link

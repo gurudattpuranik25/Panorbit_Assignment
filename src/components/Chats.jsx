@@ -1,21 +1,21 @@
 import React, { useState } from "react";
 import "../styles/chats.css";
 
-const Chats = ({ userAccounts, selectedItem }) => {
+const Chats = ({ userAccounts, selectedUser }) => {
   const [chatMenu, setChatMenu] = useState(false);
   const [activeUser, setActiveUser] = useState(null);
 
+  // toggle chat menu and set active user to null when chat is closed
   const toggleChat = () => {
     setChatMenu(!chatMenu);
     setActiveUser(null);
   };
 
-  const chatList = userAccounts.filter((user) => user.id !== selectedItem.id);
-  console.log(chatList);
+  const chatList = userAccounts.filter((user) => user.id !== selectedUser.id);
 
+  // open active user chat
   const openChat = (user) => {
     setActiveUser(user);
-    console.log(user.name);
   };
 
   return (
@@ -32,6 +32,7 @@ const Chats = ({ userAccounts, selectedItem }) => {
             <i className="fa-solid fa-angle-up"></i>
           )}
         </button>
+        {/* render chat menu */}
         {chatMenu && (
           <div className="chat__messages">
             {chatList.map((user) => {
@@ -52,6 +53,7 @@ const Chats = ({ userAccounts, selectedItem }) => {
           </div>
         )}
       </div>{" "}
+      {/* render active chat */}
       {activeUser && (
         <div className="chat__window ">
           <button

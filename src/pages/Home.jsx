@@ -5,6 +5,7 @@ import UserAccount from "../components/UserAccount";
 import { UserContext } from "../context/Context";
 
 function Home() {
+  // destructure users list from context
   const { userAccounts } = useContext(UserContext);
 
   return (
@@ -12,6 +13,7 @@ function Home() {
       <div className="users__container">
         <h1 className="heading">Select an account</h1>
         <div className="user__list">
+          {/* render users using map function */}
           <div className="accounts">
             {userAccounts.length === 0 ? (
               <img className="loader" src={loader} alt="" />

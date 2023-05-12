@@ -12,10 +12,10 @@ function App() {
       <div>
         <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route exact path="/profile/:userId" element={<Profile />} />
-          <Route exact path="/posts/:userId" element={<Posts />} />
-          <Route exact path="/gallery/:userId" element={<Gallery />} />
-          <Route exact path="/todo/:userId" element={<Todo />} />
+          <Route path="/profile/:userId" element={<Profile />} />
+          <Route path="/posts/:userId" element={<Posts />} />
+          <Route path="/gallery/:userId" element={<Gallery />} />
+          <Route path="/todo/:userId" element={<Todo />} />
         </Routes>
       </div>
     </Context>

@@ -6,6 +6,7 @@ export const UserContext = createContext();
 const Context = ({ children }) => {
   const [userAccounts, setUserAccounts] = useState([]);
 
+  // fetch users from an API
   const fetchUsers = () => {
     fetch("https://panorbit.in/api/users.json")
       .then((res) => res.json())
@@ -17,12 +18,13 @@ const Context = ({ children }) => {
     fetchUsers();
   }, []);
 
+  // return selected user from home page. To be used in other components
   const getUser = () => {
     const { userId } = useParams();
 
-    const selectedItem = userAccounts[userId - 1];
+    const selectedUser = userAccounts[userId - 1];
 
-    return selectedItem;
+    return selectedUser;
   };
 
   const value = {

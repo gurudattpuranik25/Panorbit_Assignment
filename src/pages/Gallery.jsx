@@ -8,18 +8,18 @@ import Chats from "../components/Chats";
 function Gallery() {
   const { getUser, userAccounts } = useContext(UserContext);
 
-  const selectedItem = getUser();
+  const selectedUser = getUser();
 
   return (
     <div className="gallery__home">
       <div className="gallery__page">
         <SideMenu activeLink="gallery" />
         <div className="gallery__details">
-          <UserHeader pageTitle="Gallery" selectedItem={selectedItem} />
+          <UserHeader pageTitle="Gallery" selectedUser={selectedUser} />
           <h1>Coming Soon</h1>
         </div>
       </div>
-      <Chats userAccounts={userAccounts} selectedItem={selectedItem} />
+      <Chats userAccounts={userAccounts} selectedUser={selectedUser} />
     </div>
   );
 }

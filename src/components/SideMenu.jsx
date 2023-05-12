@@ -9,11 +9,11 @@ function SideMenu({ activeLink }) {
 
   const { userAccounts } = useContext(UserContext);
 
-  const selectedItem = userAccounts[userId - 1];
+  const selectedUser = userAccounts[userId - 1];
 
   return (
     <div className="side__menu">
-      {!selectedItem ? (
+      {!selectedUser ? (
         <img className="loading" src={loader} alt="" />
       ) : (
         <div className="sections">
@@ -22,7 +22,7 @@ function SideMenu({ activeLink }) {
               activeLink === "profile" ? "active" : ""
             }`}
           >
-            <Link className="nav__link" to={`/profile/${selectedItem.id}`}>
+            <Link className="nav__link" to={`/profile/${selectedUser.id}`}>
               <span className={activeLink === "profile" ? "active" : ""}>
                 Profile
               </span>
@@ -33,7 +33,7 @@ function SideMenu({ activeLink }) {
               activeLink === "posts" ? "active" : ""
             }`}
           >
-            <Link className="nav__link" to={`/posts/${selectedItem.id}`}>
+            <Link className="nav__link" to={`/posts/${selectedUser.id}`}>
               <span className={activeLink === "posts" ? "active" : ""}>
                 Posts
               </span>
@@ -44,7 +44,7 @@ function SideMenu({ activeLink }) {
               activeLink === "gallery" ? "active" : ""
             }`}
           >
-            <Link className="nav__link" to={`/gallery/${selectedItem.id}`}>
+            <Link className="nav__link" to={`/gallery/${selectedUser.id}`}>
               <span className={activeLink === "gallery" ? "active" : ""}>
                 Gallery
               </span>
@@ -53,7 +53,7 @@ function SideMenu({ activeLink }) {
           <p
             className={`section__link ${activeLink === "todo" ? "active" : ""}`}
           >
-            <Link className="nav__link" to={`/todo/${selectedItem.id}`}>
+            <Link className="nav__link" to={`/todo/${selectedUser.id}`}>
               <span className={activeLink === "todo" ? "active" : ""}>
                 ToDo
               </span>
