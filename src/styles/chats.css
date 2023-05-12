@@ -32,7 +32,6 @@
 
 .chat__messages {
   background-color: #f5f8fa;
-  border-radius: 4px;
   padding: 10px;
   height: 80%;
   overflow-y: auto;
@@ -40,6 +39,7 @@
   flex-direction: column;
   gap: 0.5rem;
   background-color: white;
+  border: 1px solid #2c65c8;
 }
 
 .btn__text {
@@ -71,6 +71,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  cursor: pointer;
 }
 
 .user__status p {
@@ -88,9 +89,67 @@
   font-size: 0.7rem;
 }
 
+.chat__window {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 28rem;
+  width: 220px;
+  height: 250px;
+  background-color: white;
+  border: 1px solid #2c65c8;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.active__btn__text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.active__btn__text .active__user__info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.active__user__info img {
+  width: 1.5rem;
+  border-radius: 50%;
+}
+
+.active__btn__text p {
+  font-size: 0.7rem;
+}
+
+.active__user {
+  position: absolute;
+  bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.chat__text {
+  width: 180px;
+  margin: -3.5px 3.5px;
+  padding-left: 5px;
+  border-radius: 0.2rem;
+  border: 1px solid #b3b3b3;
+}
+
+.chat__text:focus {
+  outline: none;
+}
+
+.fa-arrow-right {
+  cursor: pointer;
+  color: #2c65c8;
+}
+
 .chat__messages::-webkit-scrollbar {
   width: 0.3rem;
-  /* margin: 5rem; */
 }
 .chat__messages::-webkit-scrollbar-track {
   background-color: #eff4ff;
