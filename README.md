@@ -2,7 +2,7 @@
 
 This is a prototype of a social-media application.
 
-Live Link - https://panorbit-gurudatt.netlify.app/
+Live Link - https://panorbit-social.netlify.app/
 </br>
 Source Code - https://github.com/gurudattpuranik25/Panorbit_Assignment
 </br>
