@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext } from "react";
 import "../styles/home.css";
 import loader from "../assets/loader.gif";
 import UserAccount from "../components/UserAccount";

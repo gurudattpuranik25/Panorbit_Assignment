@@ -90,7 +90,6 @@
 .user__list::-webkit-scrollbar-track {
   background-color: #eff4ff;
   border-radius: 10px;
-  /* margin-block: 1rem; */
   margin: 1.5rem;
 }
 .user__list::-webkit-scrollbar-thumb {
