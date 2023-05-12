@@ -21,7 +21,7 @@ function AccountDetails() {
   return (
     <div className="profile__home">
       <div className="profile__page">
-        <SideMenu />
+        <SideMenu activeLink="profile" />
         <div className="profile__details">
           {!selectedItem ? (
             <img className="loading" src={loader} alt="" />

@@ -4,7 +4,7 @@ import { Link, useParams } from "react-router-dom";
 import { UserContext } from "../context/Context";
 import loader from "../assets/loader.gif";
 
-function SideMenu() {
+function SideMenu({ activeLink }) {
   const { userId } = useParams();
 
   const { userAccounts } = useContext(UserContext);
@@ -17,24 +17,46 @@ function SideMenu() {
         <img className="loading" src={loader} alt="" />
       ) : (
         <div className="sections">
-          <p className="section__link">
+          <p
+            className={`section__link ${
+              activeLink === "profile" ? "active" : ""
+            }`}
+          >
             <Link className="nav__link" to={`/profile/${selectedItem.id}`}>
-              Profile
+              <span className={activeLink === "profile" ? "active" : ""}>
+                Profile
+              </span>
             </Link>
           </p>
-          <p className="section__link">
+          <p
+            className={`section__link ${
+              activeLink === "posts" ? "active" : ""
+            }`}
+          >
             <Link className="nav__link" to={`/posts/${selectedItem.id}`}>
-              Posts
+              <span className={activeLink === "posts" ? "active" : ""}>
+                Posts
+              </span>
             </Link>
           </p>
-          <p className="section__link">
+          <p
+            className={`section__link ${
+              activeLink === "gallery" ? "active" : ""
+            }`}
+          >
             <Link className="nav__link" to={`/gallery/${selectedItem.id}`}>
-              Gallery
+              <span className={activeLink === "gallery" ? "active" : ""}>
+                Gallery
+              </span>
             </Link>
           </p>
-          <p className="section__link">
+          <p
+            className={`section__link ${activeLink === "todo" ? "active" : ""}`}
+          >
             <Link className="nav__link" to={`/todo/${selectedItem.id}`}>
-              ToDo
+              <span className={activeLink === "todo" ? "active" : ""}>
+                ToDo
+              </span>
             </Link>
           </p>
         </div>

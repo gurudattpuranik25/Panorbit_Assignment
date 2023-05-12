@@ -12,7 +12,7 @@ function Gallery() {
   return (
     <div className="gallery__home">
       <div className="gallery__page">
-        <SideMenu />
+        <SideMenu activeLink="gallery" />
         <div className="gallery__details">
           <UserHeader pageTitle="Gallery" selectedItem={selectedItem} />
           <h1>Coming Soon</h1>

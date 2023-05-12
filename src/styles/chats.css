@@ -99,6 +99,7 @@
   border: 1px solid #2c65c8;
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
+  transition: all 0.5s ease-in-out;
 }
 
 .active__btn__text {

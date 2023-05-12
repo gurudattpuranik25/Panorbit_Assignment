@@ -12,7 +12,7 @@ function Todo() {
   return (
     <div className="todo__home">
       <div className="todo__page">
-        <SideMenu />
+        <SideMenu activeLink="todo" />
         <div className="todo__details">
           <UserHeader pageTitle="ToDo" selectedItem={selectedItem} />
           <h1>Coming Soon</h1>

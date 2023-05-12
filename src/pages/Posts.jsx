@@ -12,7 +12,7 @@ function Posts() {
   return (
     <div className="posts__home">
       <div className="posts__page">
-        <SideMenu />
+        <SideMenu activeLink="posts" />
         <div className="post__details">
           <UserHeader pageTitle="Posts" selectedItem={selectedItem} />
           <h1>Coming Soon</h1>

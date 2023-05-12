@@ -36,11 +36,24 @@
 
 .section__link .nav__link {
   text-decoration: none;
+}
+
+.sections span {
   color: #b0b0ee;
 }
 
-.section__link .nav__link:focus {
-  color: white;
-  font-weight: 600;
-  transition: 0.2s ease-in-out;
+.sections span.active::after {
+  position: absolute;
+  content: "";
+  top: 0.75rem;
+  left: 11rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+}
+
+.sections span.active {
+  font-weight: 900;
+  color: rgb(255, 255, 255);
 }
