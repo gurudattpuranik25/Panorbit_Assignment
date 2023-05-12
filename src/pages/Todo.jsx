@@ -3,9 +3,10 @@ import SideMenu from "../components/SideMenu";
 import UserHeader from "../components/UserHeader";
 import { UserContext } from "../context/Context";
 import "../styles/todo.css";
+import Chats from "../components/Chats";
 
 function Todo() {
-  const { getUser } = useContext(UserContext);
+  const { getUser, userAccounts } = useContext(UserContext);
 
   const selectedItem = getUser();
 
@@ -18,6 +19,7 @@ function Todo() {
           <h1>Coming Soon</h1>
         </div>
       </div>
+      <Chats userAccounts={userAccounts} selectedItem={selectedItem} />
     </div>
   );
 }

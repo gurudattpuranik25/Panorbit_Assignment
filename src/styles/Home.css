@@ -12,6 +12,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #5c5c5c;
 }
 
 .users__container {
@@ -33,6 +34,7 @@
   background-color: rgb(232, 232, 232);
   border-top-right-radius: 1.5rem;
   border-top-left-radius: 1.5rem;
+  font-size: 1.5rem;
 }
 
 .user__list {
@@ -77,6 +79,8 @@
 
 .user__link {
   text-decoration: none;
+  color: #5c5c5c;
+  font-size: 0.9rem;
 }
 
 .user__list::-webkit-scrollbar {

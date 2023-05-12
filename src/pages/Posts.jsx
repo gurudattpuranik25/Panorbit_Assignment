@@ -3,9 +3,10 @@ import SideMenu from "../components/SideMenu";
 import "../styles/posts.css";
 import UserHeader from "../components/UserHeader";
 import { UserContext } from "../context/Context";
+import Chats from "../components/Chats";
 
 function Posts() {
-  const { getUser } = useContext(UserContext);
+  const { getUser, userAccounts } = useContext(UserContext);
 
   const selectedItem = getUser();
 
@@ -18,6 +19,7 @@ function Posts() {
           <h1>Coming Soon</h1>
         </div>
       </div>
+      <Chats userAccounts={userAccounts} selectedItem={selectedItem} />
     </div>
   );
 }
