@@ -5,6 +5,7 @@ import "../styles/profile.css";
 import loader from "../assets/loader.gif";
 import SideMenu from "../components/SideMenu";
 import UserHeader from "../components/UserHeader";
+import Chats from "../components/Chats";
 
 function AccountDetails() {
   // const { userId } = useParams();
@@ -13,7 +14,7 @@ function AccountDetails() {
 
   // const selectedItem = userAccounts[userId - 1];
 
-  const { getUser } = useContext(UserContext);
+  const { getUser, userAccounts } = useContext(UserContext);
 
   const selectedItem = getUser();
 
@@ -26,17 +27,6 @@ function AccountDetails() {
             <img className="loading" src={loader} alt="" />
           ) : (
             <div className="user__details">
-              {/* <div className="user__header">
-                <p>Profile</p>
-                <div className="user__profile">
-                  <img
-                    className="user__image"
-                    src={selectedItem.profilepicture}
-                    alt="profile_picture"
-                  />
-                  <p className="menu__name">{selectedItem.name}</p>
-                </div>
-              </div> */}
               <UserHeader pageTitle="Profile" selectedItem={selectedItem} />
               <div className="user__info__section">
                 <div className="user__info">
@@ -129,6 +119,7 @@ function AccountDetails() {
           )}
         </div>
       </div>
+      <Chats userAccounts={userAccounts} selectedItem={selectedItem} />
     </div>
   );
 }

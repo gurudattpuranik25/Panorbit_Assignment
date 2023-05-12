@@ -1,0 +1,72 @@
+.user__profile {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  cursor: pointer;
+}
+
+.user__image {
+  width: 2.5rem;
+  border-radius: 50%;
+}
+
+.dialog__menu {
+  margin-top: 0.5rem;
+  margin-left: -6rem;
+}
+
+.menu {
+  width: 240px;
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  color: #5c5c5c;
+  padding: 1rem 0;
+}
+
+.dialog__menu .dialog__picture {
+  width: 5rem;
+  border-radius: 50%;
+}
+
+.dialog__user__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.dialog__email {
+  color: rgb(159, 159, 159);
+  font-size: 0.7rem;
+}
+
+.horizontal__border {
+  height: 2px;
+  background-color: rgb(230, 230, 230);
+}
+
+.dialog__user__list .dialog__user__link {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  font-size: 0.8rem;
+  text-decoration: none;
+  color: #5c5c5c;
+}
+
+.dialog__user__list img {
+  width: 2rem;
+  border-radius: 50%;
+}
+
+.sign__out {
+  text-decoration: none;
+  background-color: #d55151;
+  color: white;
+  padding: 0.3rem 0.5rem;
+  border-radius: 1rem;
+  font-size: 0.9rem;
+}

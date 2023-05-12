@@ -1,6 +1,5 @@
 import Home from "./pages/Home";
 import { Routes, Route } from "react-router-dom";
-import User from "./pages/User";
 import Profile from "./pages/Profile";
 import Context from "./context/Context";
 import Posts from "./pages/Posts";

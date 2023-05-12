@@ -49,18 +49,6 @@
   left: 15rem;
 }
 
-.user__profile {
-  display: flex;
-  gap: 0.8rem;
-  align-items: center;
-  cursor: pointer;
-}
-
-.user__image {
-  width: 2.5rem;
-  border-radius: 50%;
-}
-
 .user__info__section {
   padding: 2rem 0;
   /* display: grid;
