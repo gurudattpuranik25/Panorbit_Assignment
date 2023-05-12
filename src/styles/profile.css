@@ -7,7 +7,7 @@
 }
 
 .profile__page {
-  width: 75%;
+  width: 85%;
   display: grid;
   grid-column-gap: 4%;
   grid-template-columns: 20% 76%;
